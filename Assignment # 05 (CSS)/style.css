@@ -1,0 +1,197 @@
+/* RESET some default spacing and set general font & background */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f7f7f7; /* light gray background */
+}
+
+/* ================= HEADER SECTION ================= */
+
+/* Main header bar */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px 0;
+}
+
+.top-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  padding: 10px 0;
+}
+
+
+
+/* Airbnb logo */
+.logo {
+  width: 110px;
+  height: auto; /* keeps proportions */
+}
+
+/* CENTER SECTION inside header */
+.center {
+  display: flex;
+  justify-content: center; /* centers icons horizontally */
+  align-items: center; /* vertically align icons */
+  gap: 40px; /* space between each icon card */
+  flex: 1; /* takes equal remaining space between left & right */
+}
+
+/* RIGHT SECTION (buttons & icons) */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Small icons on right (globe, menu) */
+.icon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+/* 'Become a host' button */
+.host-btn {
+  background: none; /* transparent background */
+  border: 1px solid #ddd; /* light gray border */
+  padding: 6px 12px;
+  border-radius: 250px; /* makes it pill-shaped */
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s; /* smooth hover effect */
+}
+
+/* Hover effect for host button */
+.host-btn:hover {
+  background: #f7f7f7;
+}
+
+/* ================= ICON CARDS (Home, Experience, Services) ================= */
+.icon-card {
+  text-align: center; /* text below image centered */
+  cursor: pointer;
+}
+
+.icon-card img {
+  width: 35px;
+  height: 35px;
+  display: block;
+  margin: 0 auto 5px; /* centers the icon and adds space below it */
+}
+
+/* ================= SEARCH BOX SECTION ================= */
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  padding: 8px 16px;
+  width: 60%;
+  margin: 10px 0 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+
+
+/* Input fields inside search box */
+.search-box input {
+  border: none; /* removes ugly borders */
+  outline: none; /* removes blue border when typing */
+  font-size: 14px;
+  padding: 10px;
+  flex: 1; /* make them grow equally */
+  min-width: 0;
+}
+
+/* Search button (pink circle) */
+.search-box button {
+  background-color: #ff385c; /* Airbnb pink */
+  color: white;
+  border: none;
+  border-radius: 50%; /* makes it round */
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: background 0.3s; /* smooth hover */
+  flex-shrink: 0; /* prevents button from shrinking */
+}
+
+/* Hover effect for search button */
+.search-box button:hover {
+  background-color: #f4153e; /* darker pink */
+}
+
+/* ================= CARD GRID SECTION ================= */
+
+/* The grid that holds all the cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* auto-fit makes it responsive; 250px minimum width for each card */
+  justify-content: center;
+  gap: 20px; /* space between cards */
+  padding: 20px;
+}
+
+/* Single card styling */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden; /* hides overflowing image corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 250px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s; /* hover animation */
+}
+
+/* Card hover effect (move up slightly) */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Card image */
+.card img {
+  width: 100%; /* fill card width */
+  height: 180px; /* fixed height */
+  object-fit: cover; /* crops image perfectly without distortion */
+}
+
+/* Card text info */
+.card-info {
+  padding: 15px;
+}
+
+/* Card title */
+.card-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  color: #333;
+}
+
+/* Card location & price text */
+.card-info p {
+  margin: 5px 0;
+  color: #777;
+  font-size: 16px;
+}
+
+/* Price highlighted */
+.card-info .price {
+  color: #000;
+  font-weight: bold;
+}
+.para {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+  display: block;
+}
